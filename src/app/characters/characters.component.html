@@ -1,0 +1,11 @@
+<div *ngIf="personajes!=null; else espera">
+    <table class="d-flex justify-content-between flex-wrap">
+        <tr *ngFor="let pers of personajes.characters"
+            class="d-flex flex-column mb-3 text-center border border-success ">
+            <td><img src="{{pers.image}}" width="250"></td>
+            <td>{{pers.name}}</td>
+            <td><button class="btn btn-bd-primary">See More</button></td>
+        </tr>
+    </table>
+</div>
+<ng-template #espera>Esperando datos...</ng-template>
